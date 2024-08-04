@@ -1,1 +1,13 @@
-<p>blogs works!</p>
+<div class="mt-12">
+    <ul class="flex flex-wrap items-center justify-center">
+        <li *ngFor="let blog of myblogs">
+          <div class="w-[300px] rounded overflow-hidden">
+            <div>
+                <img src="{{blog.poster}}" alt="">
+            </div>
+            <p class="text-gray-800 font-semibold ">{{blog.blogTitle}}</p>
+            <button class=" px-8 bg-[#0f5d8c] ml-2 rounded text-[#fff]">read</button>
+          </div>  
+        </li>
+    </ul>
+</div>
