@@ -43,7 +43,7 @@ export const myprojects = [
         name:"Furniture House",
         image:`funiturehouse.jpeg`, 
         navId:2, 
-        mainTech:"Sanity",
+        mainTech:"sanity",
         description:"npm create vite@latest my-project, npx create-react-app my-project",
         shortDescription:"An application that showcases items providing funcionalities like filtering and searching.",
         technologies:["React","Shadcn","TailwindCss","Sanity"],
