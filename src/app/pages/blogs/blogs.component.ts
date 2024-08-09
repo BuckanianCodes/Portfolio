@@ -14,7 +14,7 @@ export class BlogsComponent implements OnInit{
   projects:any[] = [];
   myService = inject(BlogService)
   ngOnInit(): void {
-    const projectIds = [1, 3, 3];
+    const projectIds = [1,4,7];
     this.projects = this.myService.getProjectsByIds(projectIds);
     console.log(this.projects);
   }
