@@ -12,4 +12,7 @@ export class BlogService {
   getProjectByStack(stack:string){
     return this.projects.filter((project) => project.mainTech === stack);
   }
+  getProjectsByIds(ids: number[]) {
+    return this.projects.filter(project => ids.includes(project.id));
+  }
 }
