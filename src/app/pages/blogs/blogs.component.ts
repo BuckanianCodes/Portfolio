@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { blogs } from '../../../blogs';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -11,8 +10,8 @@ import { CommonModule } from '@angular/common';
 })
 export class BlogsComponent {
   
-  myblogs!:any[]
-    constructor(){
-      this.myblogs = blogs
-    }
+  // myblogs!:any[]
+  //   constructor(){
+  //     this.myblogs = blogs
+  //   }
 }

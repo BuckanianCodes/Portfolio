@@ -20,4 +20,33 @@
         <img src="projects.gif" alt="">
         <h1 class="text-2xl font-semibold sm:mt-0 mt-2">Projects</h1>
     </div>
+    <ul>
+        <li *ngFor="let project of projects">
+            <div  class="mt-6 sm:w-[500px] w-[350px]">
+                <span class="flex items-center justify-between">
+                <h1 class="text-lg text-[#064469] font-semibold  "> <span >0{{project.id}}.</span> {{project.name}}</h1>
+                <div class="flex gap-5 mr-4 text-lg dark:text-[#5790a2] ">
+                    <a href={{project.githubLink}}><i className="fa-brands fa-github dark:hover:text-[#d0d7e1] "></i></a>
+                    <a href={{project.web}}><i className="fa-solid fa-globe dark:hover:text-[#d0d7e1]"></i></a>
+                </div>
+                </span>
+                <div >
+                <div class="image"><img src={{project.image}} alt=""  /></div>
+                </div>
+                <div class="bg-[#d0d7e1] dark:bg-[#5790a2] dark:text-[aliceblue] text-gray-800  py-2 px-3 mt-4 rounded-sm">
+                    <p>{{project.shortDescription}}</p>
+                </div>
+                <div class="float-right flex gap-2 flex-wrap mt-2 capitalize">
+                   <ul
+                   class="float-right flex gap-2 flex-wrap mt-2 capitalize ">
+                    <li 
+                    class=""
+                    *ngFor="let tech of project.technologies">
+                        <span key={tech} class="text-[#5790a2] font-bold flex items-center justify-center rounded "><i class="fa-solid text-[12px] fa-bolt"></i>{{tech}}</span>
+                    </li>
+                   </ul>
+                </div>
+            </div>  
+        </li>
+    </ul>
 </div>
