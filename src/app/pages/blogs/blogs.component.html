@@ -7,8 +7,8 @@
         <li *ngFor="let project of projects">
           <div  class="mt-6 sm:w-[500px] w-[300px]">
             <span class="flex items-center justify-between">
-            <h1 class="text-lg text-[#064469] font-semibold  "> <span >0{{project.id}}.</span> {{project.name}}</h1>
-            <div class="flex gap-5 mr-4 text-lg dark:text-[#5790a2] ">
+            <h1 class="text-lg  font-semibold  "> <span >0{{project.id}}.</span> {{project.name}}</h1>
+            <div class="flex gap-5 mr-4 text-lg text-[#064469] ">
                 <a href={{project.githubLink}}><i class="fa-brands fa-github dark:hover:text-[#d0d7e1] "></i></a>
                 <a href={{project.web}}><i class="fa-solid fa-globe dark:hover:text-[#d0d7e1]"></i></a>
             </div>
