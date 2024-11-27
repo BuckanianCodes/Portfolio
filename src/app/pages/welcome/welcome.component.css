@@ -1,0 +1,47 @@
+#node-1{
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(9,115,121,0.9911504424778761) 35%, rgba(0,212,255,1) 100%);  
+}
+#node-1::before{
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    right: 0;
+    bottom: 0;
+    margin-bottom: -20px;
+    margin-right: -20px;
+    border-radius: 50%;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(9,115,121,0.9911504424778761) 35%, rgba(0,212,255,1) 100%);
+}
+#node-2{
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(9,115,121,0.9911504424778761) 35%, rgba(0,212,255,1) 100%);  
+}
+#node-2::before{
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 0;
+    top: 0;
+    margin-top: -20px;
+    margin-left: -20px;
+    border-radius: 50%;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(9,115,121,0.9911504424778761) 35%, rgba(0,212,255,1) 100%);
+}
+
+#h3::after{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    border-radius: 50px;
+    margin-right: 20px;
+    right: 0;
+    background-color: #fff;
+    top: 0;
+    margin-top: 20px;
+}
