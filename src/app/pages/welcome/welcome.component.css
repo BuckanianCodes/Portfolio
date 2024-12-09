@@ -26,6 +26,7 @@
     width: 20px;
     left: 0;
     top: 0;
+    bottom: 0;
     margin-top: -20px;
     margin-left: -20px;
     border-radius: 50%;
@@ -47,7 +48,7 @@
 }
 
 #validate{
-    margin-top: 20px;
+    margin-top: 10px;
     
     background: rgb(255,255,255);
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(9,115,121,0.9911504424778761) 35%, rgba(0,212,255,1) 100%);
