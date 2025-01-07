@@ -8,7 +8,7 @@ export const myprojects = [
         image:`buckbay2.jpeg`,
         shortDescription:"A fullstack minimalistic replica to pexels that allows sharing of files between different users.",
         technologies:["react","Sanity","tailwindCss","Firebase"],
-        githubLink:"https://github.com/BuckanianMark",
+        githubLink:"https://github.com/Burkycodes",
         web:"https://buckbay-8fc0a.web.app",
        
     },
@@ -21,7 +21,7 @@ export const myprojects = [
         image:`naicladi.jpeg`,
         shortDescription:"A multivendor app that incorporates the functionality of an eccomerce application making it easier to filter and search products",
         technologies:["React","Shadcn","TailwindCss","Auth0","Express","MongoDb"],
-        githubLink:"https://github.com/BuckanianMark",
+        githubLink:"https://github.com/Burkycodes",
         web:"https://naicladi-frontend-app.onrender.com",
        
     },
@@ -34,7 +34,7 @@ export const myprojects = [
         description:"npm create vite@latest my-project, npx create-react-app my-project",
         shortDescription:"Got my hands dirty with Graphql.The app helps the user discover albums by popular artists and songs featured in the album",
         technologies:["React","Firebase","TailwindCss","Apollo","MongoDb"],
-        githubLink:"https://github.com/BuckanianMark",
+        githubLink:"https://github.com/Burkycodes",
         web:"https://apollov4-album-client.onrender.com",
       
     },
@@ -47,7 +47,7 @@ export const myprojects = [
         description:"npm create vite@latest my-project, npx create-react-app my-project",
         shortDescription:"An application that showcases items providing funcionalities like filtering and searching.",
         technologies:["React","Shadcn","TailwindCss","Sanity"],
-        githubLink:"https://github.com/BuckanianMark",
+        githubLink:"https://github.com/Burkycodes",
         web:"https://funiturehouseclient.onrender.com",
   
     },
@@ -60,7 +60,7 @@ export const myprojects = [
         image:`uni-rental.jpeg`,
         shortDescription:"A fullstack application perfoming the functionalities of a real estate application catering for university students.",
         technologies:["Angular","Express","TailwindCss","MongoDb"],
-        githubLink:"https://github.com/BuckanianMark",
+        githubLink:"https://github.com/Burkycodes",
         web:"https://uni-rental-client-angular.vercel.app/rentals",
       
     },
@@ -73,7 +73,7 @@ export const myprojects = [
         description:"npm install -g @angular/cli, ng serve , ng generate component",
         shortDescription:"An app that helps you manage your passwords for different websites in a single place for easier access.",
         technologies:["Angular","Firebase","TailwindCss"],
-        githubLink:"https://github.com/BuckanianMark",
+        githubLink:"https://github.com/Burkycodes",
         web:"password-manager-mu.vercel.app",
        
     },
@@ -86,7 +86,7 @@ export const myprojects = [
         description:"npm install -g @angular/cli, ng serve , ng generate component",
         shortDescription:"An eccomerce style of shop that allows one to browse for various products based on categories:flowers,treats",
         technologies:["Angular","Firebase","TailwindCss"],
-        githubLink:"https://github.com/BuckanianMark",
+        githubLink:"https://github.com/Burkycodes",
         web:"https://purpink-clone.vercel.app",
        
     },
