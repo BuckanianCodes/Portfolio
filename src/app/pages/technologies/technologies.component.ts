@@ -1,5 +1,5 @@
 import { Component, ElementRef, HostListener, OnInit, ViewChild, AfterViewInit } from '@angular/core';
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import { trigger, state, style, transition, animate,keyframes,query,stagger } from '@angular/animations';
 
 @Component({
   selector: 'app-technologies',
@@ -7,6 +7,20 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   templateUrl: './technologies.component.html',
   styleUrls: ['./technologies.component.css'],
   animations: [
+  trigger('staggeredBounceIn', [
+    transition(':enter', [
+      query('.tech-icon', [
+        stagger(150, [
+          animate('700ms ease-out', keyframes([
+            style({ transform: 'translateY(-100px)', opacity: 0, offset: 0 }),
+            style({ transform: 'translateY(15px)', opacity: 1, offset: 0.6 }),
+            style({ transform: 'translateY(-5px)', offset: 0.8 }),
+            style({ transform: 'translateY(0)', offset: 1.0 })
+          ]))
+        ])
+      ])
+    ])
+  ]),
     trigger('fadeIn', [
       state('void', style({ opacity: 0, transform: 'translateY(20px)' })),
       state('*', style({ opacity: 1, transform: 'translateY(0)' })),
@@ -24,10 +38,18 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
     ])
   ]
 })
-export class TechnologiesComponent implements AfterViewInit {
+export class TechnologiesComponent implements AfterViewInit,OnInit {
   @ViewChild('techStack') techStack!: ElementRef;
   animationState = 'void';
   wobbleState: { [key: number]: string } = {};
+
+  ngOnInit() {
+  // Assuming you have 9 tech icons, index 0 to 8
+  for (let i = 0; i < 9; i++) {
+    this.wobbleState[i] = 'normal';
+  }
+}
+
 
   ngAfterViewInit() {
     // Trigger fade-in animation when component is in view
