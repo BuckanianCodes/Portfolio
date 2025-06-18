@@ -2,25 +2,53 @@
     <div class="sm:w-1/3 mb-4 sm:mb-0">
         <h1 class=" font-[300] text-gray-800">Mark Kariuki</h1>
         <div class="w-8 h-[1px] bg-gray-800 "></div>
-        <p class="text-lg mt-4 font-[500]">A full-stack software developer confident enough to 
-            say I can build meticulously crafted software solutions.
+        <p class="text-lg mt-4 font-[500]">A full-stack software developer crafting scalable,
+            maintainable and elegant software solutions.
+            Transforming <span class="font-bold">ideas </span> into robust digital experiences, one module at a time.
         </p>
     </div>
-<div class="z-[999] flex items-center flex-col gap-4  justify-center flex-wrap">
-    <div class="flex items-center justify-center gap-6">
-        <img src="angular-icon.png" alt="" width="40" class="z-[999]">
-        <img src="react-icon.png" alt="" width="40" class="z-[999]">
-    </div>
-    <div class="flex items-center justify-center gap-4">
-        <img src="graphql-icon.png" alt="" width="40" class="z-[999]">
-        <img src="nodejs-icon.png" alt="" width="40" class="z-[999]">
-        <img src="dotnet-icon.png" alt="" width="40" class="z-[999]">
-        <img src="hotchocolate.png" alt="" width="40" class="z-[999]">
-        <img src="docker.png" alt="" width="40" class="z-[999]">
-    </div>
-    <div class="flex items-center justify-center gap-6">
-        <img src="mongodb.png" alt="" width="40" class="z-[999]">
-        <img src="sql.png" alt="" width="40" class="z-[999]">
-    </div>
+<div #techStack class="tech-stack-container">
+  <div class="tech-stack-row">
+    <img src="angular-icon.png" alt="Angular" class="tech-icon"
+    [@wobble]="wobbleState[0] || 'normal'"
+     (mouseenter)="onMouseEnter(0)"
+     (mouseleave)="onMouseLeave(0)">
+    <img src="react-icon.png" alt="React" class="tech-icon"
+    [@wobble]="wobbleState[0] || 'normal'"
+     (mouseenter)="onMouseEnter(0)"
+     (mouseleave)="onMouseLeave(0)">
+  </div>
+  <div class="tech-stack-row">
+    <img src="graphql-icon.png" alt="GraphQL" class="tech-icon"
+    [@wobble]="wobbleState[0] || 'normal'"
+     (mouseenter)="onMouseEnter(0)"
+     (mouseleave)="onMouseLeave(0)">
+    <img src="nodejs-icon.png" alt="Node.js" class="tech-icon"
+    [@wobble]="wobbleState[0] || 'normal'"
+     (mouseenter)="onMouseEnter(0)"
+     (mouseleave)="onMouseLeave(0)">
+    <img src="dotnet-icon.png" alt=".NET" class="tech-icon"
+    [@wobble]="wobbleState[0] || 'normal'"
+     (mouseenter)="onMouseEnter(0)"
+     (mouseleave)="onMouseLeave(0)">
+    <img src="hotchocolate.png" alt="HotChocolate" class="tech-icon"
+    [@wobble]="wobbleState[0] || 'normal'"
+     (mouseenter)="onMouseEnter(0)"
+     (mouseleave)="onMouseLeave(0)">
+    <img src="docker.png" alt="Docker" class="tech-icon"
+    [@wobble]="wobbleState[0] || 'normal'"
+     (mouseenter)="onMouseEnter(0)"
+     (mouseleave)="onMouseLeave(0)">
+  </div>
+  <div class="tech-stack-row">
+    <img src="mongodb.png" alt="MongoDB" class="tech-icon"
+    [@wobble]="wobbleState[0] || 'normal'"
+     (mouseenter)="onMouseEnter(0)"
+     (mouseleave)="onMouseLeave(0)">
+    <img src="sql.png" alt="SQL" class="tech-icon"
+    [@wobble]="wobbleState[0] || 'normal'"
+     (mouseenter)="onMouseEnter(0)"
+     (mouseleave)="onMouseLeave(0)">
+  </div>
 </div>
 </div>

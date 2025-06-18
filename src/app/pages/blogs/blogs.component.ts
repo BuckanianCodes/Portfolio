@@ -16,6 +16,5 @@ export class BlogsComponent implements OnInit{
   ngOnInit(): void {
     const projectIds = [1,4,7];
     this.projects = this.myService.getProjectsByIds(projectIds);
-    console.log(this.projects);
   }
 }
