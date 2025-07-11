@@ -62,6 +62,5 @@
 }
 
 .carousel-container li #details.active{
-    display: flex;
-    width: 100%;  
+    display: flex; 
 }
