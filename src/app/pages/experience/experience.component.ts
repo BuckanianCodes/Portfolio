@@ -23,19 +23,15 @@ export class ExperienceComponent implements OnInit {
     }
   }
 
-  goToPrevious(): void {
-    this.selectedIndex =
-      this.selectedIndex === 0
-        ? this.experiences.length - 1
-        : this.selectedIndex - 1;
-  }
+  goToNext() {
+   if(this.selectedIndex < 3) this.selectedIndex++
+   }
 
-  goToNext(): void {
-    this.selectedIndex =
-      this.selectedIndex === this.experiences.length - 1
-        ? 0
-        : this.selectedIndex + 1;
+goToPrevious() {
+   if(this.selectedIndex > 1) {
+    this.selectedIndex--
   }
+}
   ngOnInit() {
     this.experiences = [
       {
@@ -61,7 +57,7 @@ export class ExperienceComponent implements OnInit {
         startdate: 'June 2024',
         enddate: 'September 2024',
         employementtype: 'contract',
-        banner: 'jfwebsite.jpeg',
+        banner: 'feastify.jpeg',
         responsibilities: [
           'Developing and maintaining the company’s e-commerce platform.',
           'Designing the company’s blog site to drive traffic.',
@@ -73,6 +69,7 @@ export class ExperienceComponent implements OnInit {
       {
         index: 3,
         companyname: 'A-List Events',
+        role: 'Full Stack Developer',
         startdate: 'Jan 2023',
         enddate: 'Present',
         employementtype: 'part-time',

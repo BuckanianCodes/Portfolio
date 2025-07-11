@@ -56,15 +56,15 @@ iconStyles: { [key: number]: any } = {};
 
   ngOnInit() {
    const positions = [
-    { top: '10px', left: '10%' },
-    { top: '10px', left: '30%' },
+    { top: '10px', left: '30%', },
     { top: '10px', left: '50%' },
-    { top: '50px', left: '20%' },
-    { top: '50px', left: '40%' },
-    { top: '50px', left: '60%' },
-    { top: '90px', left: '15%' },
-    { top: '90px', left: '35%' },
-    { top: '90px', left: '55%' }
+    { top: '60px', left: '50%' },
+    { top: '60px', left: '20%' },
+    { top: '60px', left: '35%' },
+    { top: '60px', left: '70%' },
+    { top: '60px', left: '5%' },
+    { top: '110px', left: '20%' },
+    { top: '110px', left: '55%' }
   ];
    this.icons.forEach((_, i) => {
   
