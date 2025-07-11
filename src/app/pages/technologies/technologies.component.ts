@@ -1,9 +1,11 @@
 import { Component, ElementRef, HostListener, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { trigger, state, style, transition, animate,keyframes,query,stagger } from '@angular/animations';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-technologies',
   standalone:true,
+  imports:[CommonModule],
   templateUrl: './technologies.component.html',
   styleUrls: ['./technologies.component.css'],
   animations: [
@@ -39,15 +41,31 @@ import { trigger, state, style, transition, animate,keyframes,query,stagger } fr
   ]
 })
 export class TechnologiesComponent implements AfterViewInit,OnInit {
+
+  icons = [
+  'angular-icon.png', 'react-icon.png', 'graphql-icon.png',
+  'nodejs-icon.png', 'dotnet-icon.png', 'hotchocolate.png',
+  'docker.png', 'mongodb.png', 'sql.png'
+];
+
+iconStyles: { [key: number]: any } = {};
   @ViewChild('techStack') techStack!: ElementRef;
   animationState = 'void';
   wobbleState: { [key: number]: string } = {};
 
   ngOnInit() {
   // Assuming you have 9 tech icons, index 0 to 8
-  for (let i = 0; i < 9; i++) {
-    this.wobbleState[i] = 'normal';
-  }
+   this.icons.forEach((_, i) => {
+    const top = Math.floor(Math.random() * 200); // Random Y within container
+    const left = Math.floor(Math.random() * 90); // % left positioning
+    const delay = Math.floor(Math.random() * 1000); // Delay in ms
+
+    this.iconStyles[i] = {
+      top: `${top}px`,
+      left: `${left}%`,
+      animationDelay: `${delay}ms`
+    };
+  });
 }
 
 

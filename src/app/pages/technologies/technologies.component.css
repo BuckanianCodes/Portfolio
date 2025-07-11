@@ -1,24 +1,29 @@
 .tech-stack-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  padding: 2rem;
-  opacity: 0;
-}
-.tech-stack-container.visible {
-  opacity: 1;
-}
-.tech-stack-row {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
+  position: relative;
+  width: 80%;
+  height: 100px; 
+  margin-bottom: 20px;
+  overflow: hidden;
 }
 
 .tech-icon {
+  position: absolute;
   width: 40px;
   height: 40px;
-  transition: transform 0.3s ease;
+  animation: dropIn 1s ease forwards;
+}
+
+/* Drop animation */
+@keyframes dropIn {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

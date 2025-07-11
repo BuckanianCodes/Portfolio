@@ -1,1 +1,117 @@
-<h1 class="text-center mt-6">Experience Coming Up</h1>
+<div id="exp-wrapper" class="w-full relative h-full mx-[10%] py-[10%] pb-[20%]">
+  <div class="flex items-center mt-10 justify-end autoshow">
+    <div class="w-full h-[1px] bg-[#fff]"></div>
+    <h1 class="text-lg w-full font-semibold ml-28 text-[#fff]">
+      Work Experience
+    </h1>
+  </div>
+
+  <div class="absolute md:bottom-0 md:mb-[25%] md:w-full md:right-0 md:left-0 md:ml-[50%] md:translate-y-[-50%] sm:mr-[20%]   right-0 mr-[15%] autoshow">
+    <ul class="md:flex items-center justify-center ">
+      <li *ngFor="let exp of experiences; let i = index">
+        <button
+          (click)="handleClick(i)"
+          [ngClass]="{
+            'text-[#d0d7e1]': selectedIndex === i,
+            'text-[#0fff]': selectedIndex !== i
+          }"
+          class="cursor-pointer flex items-center gap-2"
+        >
+          <i *ngIf="selectedIndex === i" class="fa fa-circle-chevron-right"></i>
+          {{ exp.companyname }}
+        </button>
+      </li>
+    </ul>
+  </div>
+  <ul class="carousel-container mt-[20px] flex flex-col gap-10">
+    <li
+      *ngFor="let exp of experiences; let i = index"
+      class="autoshow flex flex-col md:flex-row gap-2 md:gap-8"
+    >
+      <div
+        id="images"
+        [ngClass]="{ active: selectedIndex === i }"
+        class="md:left-0 flex items-center flex-row md:items-start md:justify-start gap-4 w-[80%] md:w-[40%] md:ml-[5%]"
+      >
+        <img
+          src="{{ exp.banner }}"
+          alt=""
+          class="imageReveal max-w-[500px] w-[300px]"
+        />
+        <div class="md:float-right">
+          <div class="border-2 border-[#064469] rounded overflow-hidden">
+            <img width="80" src="jf-2.jpeg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div
+        id="details"
+        [ngClass]="{ active: selectedIndex === i }"
+        class="md:mr-[5%] md:w-[40%] flex items-start gap flex-col"
+      >
+        <h1 class="text-3xl text-white">{{ exp.role }}</h1>
+        <h2 class="font-bold text-[#d0d7e1]">&#64;{{ exp.companyname }}</h2>
+        <h3 class="text-sm text-[#0fff]">
+          {{ exp.startdate }} - {{ exp.enddate }}
+        </h3>
+        <ul
+          class="text-sm font-[300] pr-12 flex flex-col text-white items-start gap-2"
+        >
+          <li
+            *ngFor="let resp of exp.responsibilities"
+            class="items-start flex justify-center gap-1"
+          >
+            <i class="fa-solid fa-feather-pointed text-xs"></i>
+            <p class="text-start">
+              {{ resp }}
+            </p>
+          </li>
+        </ul>
+        <ul
+          class="flex gap-4 items-center justify-start text-[#0fff] text-xs mt-2"
+        >
+          <li *ngFor="let tech of exp.techstack">
+            {{ tech }}
+          </li>
+        </ul>
+      </div>
+    </li>
+    <!-- <li class=" autoshow flex ">   
+        <div class="  md:w-[40%] md:ml-[5%]">  
+        <h1 class="text-3xl text-white">Full Stack Developer</h1>
+        <h2 class="font-bold text-[#d0d7e1] ">&#64;A-List Events</h2>
+        <h3 class="text-sm text-[#0fff]">Jan 2023 - Present</h3>
+        <ul class="text-sm font-[300] pr-12 flex flex-col text-white items-start gap-2">
+            <li>
+               <i class="fa-solid fa-feather-pointed text-xs"></i>
+               Continuous design of a user interface that allows users to explore, 
+               book and pay for events.  
+            </li>
+            <li>
+                 <i class="fa-solid fa-feather-pointed text-xs"></i>
+                 Developing an admin dashboard to provide insights, monitor data, 
+                 and gather user feedback.  
+            </li>
+            <li>
+                 <i class="fa-solid fa-feather-pointed text-xs"></i>
+                Provide consultancy services to reach the company’s goals.  
+            </li>
+           
+        </ul>
+         <ul class="flex gap-4 items-center justify-start text-[#0fff] text-xs mt-2">
+            <li>Next.js</li>
+            <li>TailwindCSS</li>
+            <li>Node.js</li>
+         </ul>
+         </div>
+          <div class=" w-full flex md:mr-[5%]  items-start justify-start gap-4 md:w-[40%] ">
+            <img  src="a-list-banner.jpeg" alt=""   class="imageReveal lg:w-full w-[300px]">
+            <div class="float-right">
+                <div class="border-2 border-[#064469] rounded overflow-hidden">
+                    <img width="80" src="a-list-banner.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+    </li> -->
+  </ul>
+</div>

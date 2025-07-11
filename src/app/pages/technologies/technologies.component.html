@@ -7,48 +7,15 @@
             Transforming <span class="font-bold">ideas </span> into robust digital experiences, one module at a time.
         </p>
     </div>
-<div #techStack class="tech-stack-container" [@staggeredBounceIn]>
-  <div class="tech-stack-row">
-    <img src="angular-icon.png" alt="Angular" class="tech-icon"
-    [@wobble]="wobbleState[0]"
-     (mouseenter)="onMouseEnter(0)"
-     (mouseleave)="onMouseLeave(0)">
-    <img src="react-icon.png" alt="React" class="tech-icon"
-    [@wobble]="wobbleState[1]"
-     (mouseenter)="onMouseEnter(0)"
-     (mouseleave)="onMouseLeave(0)">
-  </div>
-  <div class="tech-stack-row">
-    <img src="graphql-icon.png" alt="GraphQL" class="tech-icon"
-    [@wobble]="wobbleState[2]"
-     (mouseenter)="onMouseEnter(0)"
-     (mouseleave)="onMouseLeave(0)">
-    <img src="nodejs-icon.png" alt="Node.js" class="tech-icon"
-    [@wobble]="wobbleState[3]"
-     (mouseenter)="onMouseEnter(0)"
-     (mouseleave)="onMouseLeave(0)">
-    <img src="dotnet-icon.png" alt=".NET" class="tech-icon"
-    [@wobble]="wobbleState[4]"
-     (mouseenter)="onMouseEnter(0)"
-     (mouseleave)="onMouseLeave(0)">
-    <img src="hotchocolate.png" alt="HotChocolate" class="tech-icon"
-    [@wobble]="wobbleState[5]"
-     (mouseenter)="onMouseEnter(0)"
-     (mouseleave)="onMouseLeave(0)">
-    <img src="docker.png" alt="Docker" class="tech-icon"
-    [@wobble]="wobbleState[6]"
-     (mouseenter)="onMouseEnter(0)"
-     (mouseleave)="onMouseLeave(0)">
-  </div>
-  <div class="tech-stack-row">
-    <img src="mongodb.png" alt="MongoDB" class="tech-icon"
-    [@wobble]="wobbleState[7]"
-     (mouseenter)="onMouseEnter(0)"
-     (mouseleave)="onMouseLeave(0)">
-    <img src="sql.png" alt="SQL" class="tech-icon"
-    [@wobble]="wobbleState[8]"
-     (mouseenter)="onMouseEnter(0)"
-     (mouseleave)="onMouseLeave(0)">
-  </div>
+<div #techStack class="tech-stack-container border rounded-lg ">
+  <img *ngFor="let icon of icons; let i = index"
+       [src]="icon"
+       alt="Tech"
+       class="tech-icon"
+       [ngStyle]="iconStyles[i]"
+       [@wobble]="wobbleState[i]"
+       (mouseenter)="onMouseEnter(i)"
+       (mouseleave)="onMouseLeave(i)">
 </div>
+
 </div>
