@@ -5,7 +5,10 @@
       Work Experience
     </h1>
   </div>
-
+    <div class="absolute right-0 md:hidden flex items-center text-[#5790a2] flex-col gap-8  top-0 mt-[30%] mr-[20%]">
+        <i class="fa-solid fa-2x fa-circle-chevron-right"></i>
+        <i class="fa-solid fa-2x fa-circle-chevron-left"></i>
+    </div>
 <div 
   class="absolute w-full bottom-0 left-0 pl-12 md:pl-0  ml-[50%] transform -translate-x-[60%]  mb-[5%] md:mb-[20px] lg:mb-[20px]  autoshow">
     <ul class="flex items-center flex-wrap  gap-6 justify-center ">
@@ -13,7 +16,7 @@
         <button
           (click)="handleClick(exp.index)"
           [ngClass]="{
-            'text-[#d0d7e1] md:border-b-2': selectedIndex === exp.index,
+            'text-[#d0d7e1] border-b-2': selectedIndex === exp.index,
             'text-[#0fff]': selectedIndex !== exp.index
           }"
           class="cursor-pointer flex flex-wrap items-center gap-2">
