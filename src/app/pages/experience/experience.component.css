@@ -3,14 +3,14 @@
     position: relative;
 }
 .autoshow{
-    animation: text-appear both;
+    /* animation: text-appear both;
     animation-timeline: view();
-    animation-range: entry 20% cover 100vh;
+    animation-range: entry 50% cover 100vh; */
 }
 
 .imageReveal{
-    animation: imageReveal both;
-    animation-timeline: view(50% 20%);
+    /* animation: imageReveal both;
+    animation-timeline: view(50% 20%); */
 }
 
 @keyframes imageReveal{
