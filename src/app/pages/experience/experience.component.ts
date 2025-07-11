@@ -61,10 +61,10 @@ goToPrevious() {
         banner: 'feastify.jpeg',
         websiteUrl:"https://thefeastify.com/",
         responsibilities: [
-          'Developing and maintaining the company’s e-commerce platform.',
-          'Designing the company’s blog site to drive traffic.',
-          'Collaborating with third-party software providers to improve and enhance key applications.',
-          'Supporting the adoption of new software applications to enhance company’s operations.',
+          'Handled frontend development, ensuring responsive and intuitive designs.',
+          'Collaborated with backend developers to efficiently handle data.',
+          'Maintained the admin panel that manages user records and provided insights. ',
+         
         ],
         techstack: ['React', 'TailwindCSS'],
       },
