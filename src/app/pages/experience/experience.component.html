@@ -6,18 +6,19 @@
     </h1>
   </div>
 
-  <div class="absolute md:bottom-0 md:mb-[25%] md:w-full md:right-0 md:left-0 md:ml-[50%] md:translate-y-[-50%] sm:mr-[20%]   right-0 mr-[15%] autoshow">
-    <ul class="md:flex items-center justify-center ">
+<div 
+  class="absolute w-full bottom-0 left-0 ml-[-50px] transform -translate-x-1/2 mb-[10%] md:mb-[20%]  autoshow">
+    <ul class="flex items-center gap-6 justify-center ">
       <li *ngFor="let exp of experiences; let i = index">
         <button
           (click)="handleClick(i)"
           [ngClass]="{
-            'text-[#d0d7e1]': selectedIndex === i,
+            'text-[#d0d7e1] md:border-b-2': selectedIndex === i,
             'text-[#0fff]': selectedIndex !== i
           }"
           class="cursor-pointer flex items-center gap-2"
         >
-          <i *ngIf="selectedIndex === i" class="fa fa-circle-chevron-right"></i>
+          <!-- <i *ngIf="selectedIndex === i" class="fa md:hidden fa-circle-chevron-right"></i> -->
           {{ exp.companyname }}
         </button>
       </li>
@@ -26,7 +27,7 @@
   <ul class="carousel-container mt-[20px] flex flex-col gap-10">
     <li
       *ngFor="let exp of experiences; let i = index"
-      class="autoshow flex flex-col md:flex-row gap-2 md:gap-8"
+      class="autoshow justify-center flex flex-col md:flex-row gap-2 md:gap-8"
     >
       <div
         id="images"

@@ -53,16 +53,25 @@ iconStyles: { [key: number]: any } = {};
   animationState = 'void';
   wobbleState: { [key: number]: string } = {};
 
+
   ngOnInit() {
-  // Assuming you have 9 tech icons, index 0 to 8
+   const positions = [
+    { top: '10px', left: '10%' },
+    { top: '10px', left: '30%' },
+    { top: '10px', left: '50%' },
+    { top: '50px', left: '20%' },
+    { top: '50px', left: '40%' },
+    { top: '50px', left: '60%' },
+    { top: '90px', left: '15%' },
+    { top: '90px', left: '35%' },
+    { top: '90px', left: '55%' }
+  ];
    this.icons.forEach((_, i) => {
-    const top = Math.floor(Math.random() * 200); // Random Y within container
-    const left = Math.floor(Math.random() * 90); // % left positioning
-    const delay = Math.floor(Math.random() * 1000); // Delay in ms
+  
+    const delay = Math.floor(Math.random() * 1000); 
 
     this.iconStyles[i] = {
-      top: `${top}px`,
-      left: `${left}%`,
+       ...positions[i],
       animationDelay: `${delay}ms`
     };
   });
