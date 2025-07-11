@@ -10,10 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExperienceComponent implements OnInit{
   experiences!:any[]
-  selectedIndex:number = 0;
+  selectedIndex:number = 1;
 
   handleClick(index:number){
-    console.log("clicked",index)
+  console.log("clicked",index)
    this.selectedIndex = index
   }
    scrollTo(offset:number):void{
@@ -28,6 +28,7 @@ export class ExperienceComponent implements OnInit{
 
     this.experiences = [
       {
+        index:1,
         companyname:"JackFruit Finance",
         role:"Website Developer",
         startdate:"October 2024",
@@ -48,6 +49,7 @@ export class ExperienceComponent implements OnInit{
         ]
       },
       {
+        index:2,
         companyname:"The Feasify",
         role:"Frontend Developer",
         startdate:"June 2024",
@@ -66,6 +68,7 @@ export class ExperienceComponent implements OnInit{
         ]
       },
       {
+        index:3,
         companyname:"A-List Events",
         startdate:"Jan 2023",
         enddate:"Present",

@@ -9,15 +9,14 @@
 <div 
   class="absolute w-full bottom-0 left-0 pl-12 md:pl-0  ml-[50%] transform -translate-x-[60%]  mb-[5%] md:mb-[20px] lg:mb-[20px]  autoshow">
     <ul class="flex items-center flex-wrap  gap-6 justify-center ">
-      <li *ngFor="let exp of experiences; let i = index">
+      <li *ngFor="let exp of experiences">
         <button
-          (click)="handleClick(i)"
+          (click)="handleClick(exp.index)"
           [ngClass]="{
-            'text-[#d0d7e1] md:border-b-2': selectedIndex === i,
-            'text-[#0fff]': selectedIndex !== i
+            'text-[#d0d7e1] md:border-b-2': selectedIndex === exp.index,
+            'text-[#0fff]': selectedIndex !== exp.index
           }"
-          class="cursor-pointer flex flex-wrap items-center gap-2"
-        >
+          class="cursor-pointer flex flex-wrap items-center gap-2">
           <!-- <i *ngIf="selectedIndex === i" class="fa md:hidden fa-circle-chevron-right"></i> -->
           {{ exp.companyname }}
         </button>
@@ -26,7 +25,7 @@
   </div>
   <ul class="carousel-container mt-[20px] flex flex-col gap-10">
     <li
-      *ngFor="let exp of experiences; let i = index"
+      *ngFor="let exp of experiences"
       class="autoshow justify-center flex flex-col md:flex-row gap-2 md:gap-8"
     >
     <div>
@@ -34,7 +33,7 @@
     </div>
       <div
         id="images"
-        [ngClass]="{ active: selectedIndex === i }"
+        [ngClass]="{ active: selectedIndex === exp.index }"
         class="md:left-0 flex items-center flex-row md:items-start md:justify-start gap-4 w-[80%] md:w-[40%] md:ml-[5%]"
       >
         <img
@@ -50,7 +49,7 @@
       </div>
       <div
         id="details"
-        [ngClass]="{ active: selectedIndex === i }"
+        [ngClass]="{ active: selectedIndex === exp.index }"
         class="md:mr-[5%] md:w-[40%] pl-1  flex items-start gap flex-col"
       >
         <h1 class="text-3xl text-white">{{ exp.role }}</h1>
