@@ -16,7 +16,7 @@
             'text-[#d0d7e1] md:border-b-2': selectedIndex === i,
             'text-[#0fff]': selectedIndex !== i
           }"
-          class="cursor-pointer flex items-center gap-2"
+          class="cursor-pointer flex flex-wrap items-center gap-2"
         >
           <!-- <i *ngIf="selectedIndex === i" class="fa md:hidden fa-circle-chevron-right"></i> -->
           {{ exp.companyname }}
@@ -42,8 +42,8 @@
           alt=""
           class="imageReveal max-w-[500px] w-[300px]"
         />
-        <div class="md:float-right">
-          <div class="border-2 border-[#064469] rounded overflow-hidden">
+        <div class="md:float-right mt-2 w-[80%]">
+          <div class=" rounded overflow-hidden">
             <img width="80" src="jf-2.jpeg" alt="" />
           </div>
         </div>
@@ -51,7 +51,7 @@
       <div
         id="details"
         [ngClass]="{ active: selectedIndex === i }"
-        class="md:mr-[5%] md:w-[40%] flex items-start gap flex-col"
+        class="md:mr-[5%] md:w-[40%] pl-1  flex items-start gap flex-col"
       >
         <h1 class="text-3xl text-white">{{ exp.role }}</h1>
         <h2 class="font-bold text-[#d0d7e1]">&#64;{{ exp.companyname }}</h2>
@@ -63,10 +63,10 @@
         >
           <li
             *ngFor="let resp of exp.responsibilities"
-            class="items-start flex justify-center gap-1"
+            class="  flex items-start justify-center gap-1"
           >
             <i class="fa-solid fa-feather-pointed text-xs"></i>
-            <p class="text-start">
+            <p class="text-start text-wrap w-[100%] pr-2">
               {{ resp }}
             </p>
           </li>
