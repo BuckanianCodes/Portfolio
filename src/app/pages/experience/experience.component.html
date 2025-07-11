@@ -36,18 +36,19 @@
       </li>
     </ul>
   </div>
-  <ul class="carousel-container mt-[20px] flex flex-col gap-10">
+  <ul class="carousel-container  flex flex-col gap-10 ">
     <li
+    id="main_list"
       *ngFor="let exp of experiences"
-      class="autoshow justify-center flex flex-col md:flex-row gap-2 md:gap-8"
+      [ngClass]="{ active: selectedIndex === exp.index }"
+      class="autoshow justify-center mt-[20px] flex flex-col md:flex-row gap-2 md:gap-8 "
     >
     <div>
 
     </div>
       <div
-        id="images"
         [ngClass]="{ active: selectedIndex === exp.index }"
-        class="md:left-0 flex items-center flex-row md:items-start md:justify-start gap-4 w-[80%] md:w-[40%] md:ml-[5%]"
+        class="md:left-0   flex items-center flex-row md:items-start justify-start gap-4 w-[80%] md:w-[40%] md:ml-[5%]"
       >
         <img
           src="{{ exp.banner }}"
@@ -61,9 +62,7 @@
         </div> -->
       </div>
       <div
-        id="details"
-        [ngClass]="{ active: selectedIndex === exp.index }"
-        class="md:mr-[5%] md:w-[100%] pl-1  flex items-start gap-2 flex-col"
+        class="md:mr-[5%] md:w-[100%] mt-[20px] pl-1  flex items-start gap-2 flex-col"
       >
         <h1 class="sm:text-3xl text-xl text-white">{{ exp.role }}</h1>
         <h2 class="font-bold text-[#d0d7e1]">&#64;{{ exp.companyname }}</h2>
@@ -75,7 +74,7 @@
         >
           <li
             *ngFor="let resp of exp.responsibilities"
-            class="  flex items-start justify-center gap-1"
+            class="flex items-start justify-center gap-1"
           >
             <i class="fa-solid fa-feather-pointed text-xs"></i>
             <p class="text-start text-wrap w-[100%] pr-2">

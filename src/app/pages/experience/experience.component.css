@@ -47,20 +47,13 @@
     border-radius: 15px;
     /* box-shadow: 0 6px 16px #dce1e1; */
     }
-.carousel-container li #images{
+.carousel-container #main_list{
     display: none;
-    border-radius: 15px;
-}
-.carousel-container li #details{
-     display: none;
-    border-radius: 15px;
 }
 
-.carousel-container li #images.active{
+
+.carousel-container #main_list.active{
    display: block;
-    width: 100%;  
+    width: 100%; 
 }
 
-.carousel-container li #details.active{
-    display: flex; 
-}

@@ -58,6 +58,7 @@ goToPrevious() {
         enddate: 'September 2024',
         employementtype: 'contract',
         banner: 'feastify.jpeg',
+        websiteUrl:"https://thefeastify.com/",
         responsibilities: [
           'Developing and maintaining the company’s e-commerce platform.',
           'Designing the company’s blog site to drive traffic.',
@@ -74,6 +75,7 @@ goToPrevious() {
         enddate: 'Present',
         employementtype: 'part-time',
         banner: 'a-list-banner.jpeg',
+        websiteUrl:"https://a-list-events.com/",
         responsibilities: [
           'Provide consultancy services to reach the company’s goals.',
           'Developing an admin dashboard to provide insights, monitor data, and gather user feedback. ',
