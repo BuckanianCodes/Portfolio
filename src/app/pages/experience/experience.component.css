@@ -1,7 +1,6 @@
 #exp-wrapper{
     min-height: 400px;
-    position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .autoshow{
     /* animation: text-appear both;
