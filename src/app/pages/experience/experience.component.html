@@ -48,13 +48,14 @@
     </div>
       <div
         [ngClass]="{ active: selectedIndex === exp.index }"
-        class="md:left-0   flex items-center flex-row md:items-start justify-start gap-4 w-[80%] md:w-[40%] md:ml-[5%]"
+        class="md:left-0   flex items-start flex-row md:items-start justify-start gap-4 w-[80%] md:w-[40%] md:ml-[5%]"
       >
         <img
           src="{{ exp.banner }}"
           alt=""
           class="imageReveal max-w-[500px] md:w-[300px]  w-[220px]"
         />
+        <a href={{exp.websiteUrl}}><i class="fa-solid fa-globe dark:hover: text-[#d0d7e1]"></i></a>
         <!-- <div class="md:float-right mt-2 w-[80%]">
           <div class=" rounded overflow-hidden">
             <img width="80" src="jf-2.jpeg" alt="" />
@@ -76,7 +77,7 @@
             *ngFor="let resp of exp.responsibilities"
             class="flex items-start justify-center gap-1"
           >
-            <i class="fa-solid fa-feather-pointed text-xs"></i>
+            <i class="fa-solid fa-circle-chevron-right pt-1 text-xs"></i>
             <p class="text-start text-wrap w-[100%] pr-2">
               {{ resp }}
             </p>

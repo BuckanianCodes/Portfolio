@@ -42,6 +42,7 @@ goToPrevious() {
         enddate: 'July 2025',
         employementtype: 'hybrid',
         banner: 'jfwebsite.jpeg',
+        websiteUrl:"https://www.jackfruitfinance.com/",
         responsibilities: [
           'Developing and maintaining the company’s e-commerce platform.',
           'Designing the company’s blog site to drive traffic.',
