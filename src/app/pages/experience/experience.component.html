@@ -1,7 +1,7 @@
 <div id="exp-wrapper" class="w-full relative h-full mx-[10%] py-[10%] pb-[20%]">
   <div class="flex items-center mt-10 justify-end autoshow">
     <div class="w-full h-[1px] bg-[#fff]"></div>
-    <h1 class="text-lg w-full font-semibold  md:ml-28 ml-12 text-[#fff]">
+    <h1 class="text-lg w-full font-semibold  md:ml-28 sm:ml-12 ml-4 text-[#fff]">
       Work Experience
     </h1>
   </div>
@@ -55,7 +55,7 @@
         [ngClass]="{ active: selectedIndex === exp.index }"
         class="md:mr-[5%] md:w-[40%] pl-1  flex items-start gap flex-col"
       >
-        <h1 class="text-3xl text-white">{{ exp.role }}</h1>
+        <h1 class="sm:text-3xl text-xl text-white">{{ exp.role }}</h1>
         <h2 class="font-bold text-[#d0d7e1]">&#64;{{ exp.companyname }}</h2>
         <h3 class="text-sm text-[#0fff]">
           {{ exp.startdate }} - {{ exp.enddate }}
